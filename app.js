@@ -7,7 +7,7 @@ const from = document.querySelector(".from select");
 const to = document.querySelector(".to select");
 const btn = document.querySelector("form button");
 const exgBtn = document.querySelector("form i");
-const key = "e1d2f1a90e8c504ba19c3009";
+const key = "YOUR_API_KEY";
 const dropdowns = document.querySelectorAll(".dropdown select");
 const msg = document.querySelector(".msg");
 
