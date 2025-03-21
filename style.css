@@ -1,0 +1,205 @@
+:root {
+    --color1: #282727;
+    --color2: #fefefe;
+    --color3: green;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+#theme, #reset {
+    position: absolute;
+    top: 20px;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#theme {
+    right: 20px;
+}
+
+#reset {
+    left: 20px;
+}
+
+#theme:hover, #reset:hover {
+    transform: scale(1.1);
+    background-color: var(--color2);
+    border: 1px solid var(--color1);
+    color: var(--color1);
+}
+
+.container {
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 32px;
+    border-radius: 16px;
+    min-height: 500px;
+    width: 500px;
+}
+
+form {
+    margin: 32px 0 16px 0;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+}
+
+form input {
+    border: 1px solid var(--color2);
+    font-size: 16px;
+    height: 48px;
+    padding-left: 8px;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.dropdown i {
+    font-size: 26px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.select-container img {
+    max-width: 40px;
+    margin-right: 5px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid var(--color2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.select-container select {
+    font-size: 16px;
+    width: 20px;
+}
+
+.select-container select:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.msg {
+    visibility: hidden;
+    border: 1px solid var(--color2);
+    border-radius: 8px;
+    margin: 32px 0 32px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 50px;
+}
+
+form button {
+    height: 48px;
+    margin-top: 40px;
+    background-color: green;
+    color: #fefefe;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    color: var(--color1);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#love {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    #theme, #reset {
+        top: 90px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        padding: 24px;
+    }
+
+    form input,
+    form button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .dropdown {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .select-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
